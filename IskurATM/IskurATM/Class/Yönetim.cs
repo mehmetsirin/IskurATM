@@ -13,6 +13,18 @@ namespace IskurATM.Class
          para birimi önemli
          ana para hesaplanacak.
          */
-
+        Kisi kisi = new Kisi();
+        
+        public void ParaGetir(int id)
+        {
+            foreach (var item in Kisi.kullanicilar)
+            {
+                if (id==kisi.ID)
+                {
+                    Console.WriteLine("Toplam Bakiyeniz : " + kisi.bakiye);
+                }
+            }
+            
+        }
     }
 }
