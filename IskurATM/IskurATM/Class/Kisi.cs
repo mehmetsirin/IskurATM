@@ -60,6 +60,15 @@ namespace IskurATM.Class
             }
             return null;
         }
+        public bool KisiEkle(Kisi kisi)
+        {   if(kisi != null)
+            {
+                kullanicilar.Add(kisi);
+                return true;
+            }
+
+            return false;
+        }
 
         public bool ParaCek(decimal tutar , int ID)
         {
