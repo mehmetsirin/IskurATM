@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IskurATM.Enumeration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace IskurATM.Class
         public string soyad { get; set; }
         public string tc { get; set; }
         public decimal bakiye { get; set; }
+        public ParaBirim paraBirim { get; set; } = ParaBirim.TL;
         
 
         public Kisi(string isim, string soyad, string tc, decimal bakiye)
@@ -77,7 +79,6 @@ namespace IskurATM.Class
                 return kullanicilar.Remove(kisi);
             return false;
         }
-
 
         
     }
