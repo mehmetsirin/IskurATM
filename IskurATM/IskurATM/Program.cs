@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IskurATM.Class;
+using System;
 
 namespace IskurATM
 {
@@ -11,11 +12,9 @@ namespace IskurATM
 
         static void Main(string[] args)
         {
-
             //Console.WriteLine();
             //adi = Console.ReadLine();
             int sayac = 0;
-
             while (sayac < 3)
             {
 
@@ -28,14 +27,12 @@ namespace IskurATM
                     Console.WriteLine(" kullanici tc ve sifresini giriniz : ");
                     TC = Console.ReadLine();
                     sifre = Console.ReadLine();
-                    var control = test(TC, sifre);
+                    var control = Login(TC, sifre);
                     if (control == false)
                     {
                         sayac++;
-                        if (sayac!=3)
-                        Console.WriteLine("Yanlış giriş yaptınız. " + (3 - sayac) + " hakkınız kaldı.");
-
-
+                        if (sayac != 3)
+                            Console.WriteLine("Yanlış giriş yaptınız. " + (3 - sayac) + " hakkınız kaldı.");
                     }
                     else
                     {
@@ -44,9 +41,8 @@ namespace IskurATM
 
                 }
 
-
             }
-          
+
             if (sayac >= 3)
             {
                 Console.WriteLine("kartınız bloke edildi");
@@ -61,11 +57,11 @@ namespace IskurATM
         }
 
 
-        public static bool test(string tc, string sifre)
+        public static bool Login(string tc, string sifre)
         {
 
+          
             return false;
-
         }
 
     }
