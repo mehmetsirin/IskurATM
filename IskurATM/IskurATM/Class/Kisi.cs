@@ -10,7 +10,7 @@ namespace IskurATM.Class
 
     public class Kisi
     {
-        public static List<Kisi> kullanicilar = new List<Kisi>();
+        public static List<Kisi> kullanicilar = new List<Kisi>() { new Kisi() {  isim="zehra", tc="123456789"} };
         private static int newID = 0;
         public int ID { get; set; }
         public string isim { get; set; }
