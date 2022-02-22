@@ -38,6 +38,10 @@ namespace IskurATM.Class
             this.bakiye = 1000;
             kullanicilar.Add(this);
         }
+        public Kisi()
+        {
+            this.ID = CreateNewID();
+        }
 
         private int CreateNewID()
         { newID++;
@@ -60,13 +64,20 @@ namespace IskurATM.Class
         public bool ParaCek(decimal tutar , int ID)
         {
             Kisi kisi = KisiBul(ID);
-            if(kisi != null)
+            if(kisi != null && kisi.bakiye >= tutar)
             {
                 kisi.bakiye -= tutar;
                 return true;
             }
             return false;
-        
+        }
+
+        public bool KisiKaldır(int ID)
+        {
+            Kisi kisi = KisiBul(ID);
+            if (kisi != null)
+                return kullanicilar.Remove(kisi);
+            return false;
         }
 
 
