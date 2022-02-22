@@ -71,7 +71,16 @@ namespace IskurATM.Class
             }
             return false;
         }
-
+        public bool ParaYatir(decimal tutar, int ID)
+        {
+            Kisi kisi = KisiBul(ID);
+            if (kisi != null && tutar > 0)
+            {
+                kisi.bakiye += tutar;
+                return true;
+            }
+            return false;
+        }
         public bool KisiKaldır(int ID)
         {
             Kisi kisi = KisiBul(ID);
