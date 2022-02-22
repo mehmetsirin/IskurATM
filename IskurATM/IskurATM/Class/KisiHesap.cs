@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace IskurATM.Class
 {
-    class KisiHesap
+ public   class KisiHesap
     {
+        public decimal miktar { get; set; }
+        public string paraBirimi { get; set; }
+
     }
 }

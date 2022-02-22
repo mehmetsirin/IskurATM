@@ -15,15 +15,22 @@ namespace IskurATM.Class
          */
         Kisi kisi = new Kisi();
         
-        public void ParaGetir(int id)
+        public KisiHesap ParaGetir(int id)
         {
+            KisiHesap kisiHesap = new KisiHesap();
             foreach (var item in Kisi.kullanicilar)
             {
                 if (id==kisi.ID)
                 {
+
+                    kisiHesap.miktar = item.bakiye;
+                    kisiHesap.paraBirimi = item.paraBirim.ToString();
                     Console.WriteLine("Toplam Bakiyeniz : " + kisi.bakiye);
+                    break;           
                 }
+              
             }
+            return kisiHesap;
             
         }
     }
