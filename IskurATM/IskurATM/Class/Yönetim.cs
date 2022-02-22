@@ -14,5 +14,17 @@ namespace IskurATM.Class
          ana para hesaplanacak.
          */
 
+        public void bilancoZaman(int userID, DateTime date)
+        {
+            foreach (var item in Yönetimİslemler.bilanco)
+            {
+                if (item.kisiId == userID && item.Zaman == date)
+                {
+                    Console.WriteLine(item.Bakiye + item.Zaman.ToString());
+                }
+            }
+
+        }
+
     }
 }
