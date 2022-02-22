@@ -10,5 +10,7 @@ namespace IskurATM.Class
     {
         //para girdi çıktısı bir yerde tutulacak. günlük ne kadar bilanço elde edildi.
         //user id, ne kadar para çekildi, zaman....
+
+       
     }
 }

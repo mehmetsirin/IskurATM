@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace IskurATM.Interface
 {
-    interface Bilanco
+    interface IBilanco
     {
+        public int gunSonuOzet(int userID, DateTime date)
+        {
+            return 0;
+        }
+
+        public int aySonuRapor()
+        {
+            return 0;
+        }
+
+
+
     }
 }
