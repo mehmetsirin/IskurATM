@@ -6,7 +6,7 @@ namespace IskurATM
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //ara yüz yazın. (gizem-zehra-sebahat)
         }
     }
 }
