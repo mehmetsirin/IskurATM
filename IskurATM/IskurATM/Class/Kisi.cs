@@ -75,6 +75,8 @@ namespace IskurATM.Class
             Kisi kisi = KisiBul(ID);
             if(kisi != null && kisi.bakiye >= tutar)
             {
+                Yönetimİslemler bilanco = new Yönetimİslemler();
+                bilanco.BilancoEkle(ID, tutar * -1, paraBirim.ToString());
                 kisi.bakiye -= tutar;
                 return true;
             }
@@ -85,6 +87,8 @@ namespace IskurATM.Class
             Kisi kisi = KisiBul(ID);
             if (kisi != null && tutar > 0)
             {
+                Yönetimİslemler bilanco = new Yönetimİslemler();
+                bilanco.BilancoEkle(ID, tutar, paraBirim.ToString());
                 kisi.bakiye += tutar;
                 return true;
             }
